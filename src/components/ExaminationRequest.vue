@@ -89,7 +89,7 @@ export default {
   data: () => ({
     patient_tests: [],
     patient_specimen_types: [],
-    priority: "",
+    priority: "0",
     note: "",
     dialog: false
   }),
