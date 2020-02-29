@@ -1,0 +1,12 @@
+[
+    { "title": "CBC", "value": "cbc" },
+    { "title": "ESR", "value": "esr" },
+    { "title": "Hemoglobin", "value": "hemoglobin" },
+    { "title": "Reticulocyte", "value": "reticulocyte" },
+    { "title": "Platelet count", "value": "platelet_count" },
+    { "title": "Blood Morphology", "value": "blood_morphology" },
+    { "title": "PT with INR", "value": "pt_with_inr" },
+    { "title": "aPTT", "value": "aptt" },
+    { "title": "Fibrinogen", "value": "fibrinogen" },
+    { "title": "ABO with RH Factor", "value": "abo_with_rh_factor" }
+  ]

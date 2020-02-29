@@ -1,0 +1,86 @@
+[
+  {
+    "id": 21,
+    "title": "Hematology",
+    "sub": [
+      { "title": "CBC", "value": "cbc" },
+      { "title": "ESR", "value": "esr" },
+      { "title": "Hemoglobin", "value": "hemoglobin" },
+      { "title": "Reticulocyte", "value": "reticulocyte" },
+      { "title": "Platelet count", "value": "platelet_count" },
+      { "title": "Blood Morphology", "value": "blood_morphology" },
+      { "title": "PT with INR", "value": "pt_with_inr" },
+      { "title": "aPTT", "value": "aptt" },
+      { "title": "Fibrinogen", "value": "fibrinogen" },
+      { "title": "ABO with RH Factor", "value": "abo_with_rh_factor" }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Clinical Chemistry",
+    "sub": [
+      { "title": "FBS", "value": "fbs" },
+      { "title": "RBS", "value": "rbs" },
+      { "title": "AST", "value": "ast" },
+      { "title": "ALT", "value": "alt" },
+      { "title": "Bilirubin, T", "value": "bilirubin_t" },
+      { "title": "Bilirubin, D", "value": "bilirubin_d" },
+      { "title": "Urea", "value": "urea" },
+      { "title": "Creatinine", "value": "creatinine" }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Immunoassay",
+    "sub": [
+        { "title": "T3", "value": "t3" },
+        { "title": "T4", "value": "t4" },
+        { "title": "TSH", "value": "tsh" },
+        { "title": "Free T3", "value": "free_t3" },
+        { "title": "Free T4", "value": "free_t4" }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Urinalysis",
+    "sub": [
+      { "title": "Complete Urinalysis", "value": "complete_urinalysis" },
+      { "title": "Complete Macroscopic", "value": "complete_macroscopic" },
+      { "title": "Complete Chemical Test", "value": "complete_chemical_test" }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "Parasitology",
+    "sub": [
+        { "title": "Stool Exam (Direct)", "value": "stool_exam_direct" },
+        { "title": "Stool Exam (Concentration)", "value": "stool_exam_concentration" },
+        { "title": "Malaria Test", "value": "malaria_test" }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Serology",
+    "sub": [
+      { "title": "Widal", "value": "widal" },
+      { "title": "RPR", "value": "rpr" },
+      { "title": "ASO", "value": "aso" }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "Microbiology",
+    "sub": [
+      { "title": "Specimen", "value": "specimen" },
+      { "title": "KOH", "value": "koh" },
+      { "title": "wet Film", "value": "wet_film" }
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Miscellaneous",
+    "sub": [
+      { "title": "FNA", "value": "fna" }
+    ]
+  }
+]
