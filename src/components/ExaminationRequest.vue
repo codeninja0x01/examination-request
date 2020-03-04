@@ -104,8 +104,11 @@ export default {
         priority: this.priority,
         note: this.note
       };
-      // Implement posting to remote
-      // On Success Close modal
+      this.overlay = true;
+      setTimeout(() => {
+        this.overlay = false;
+        this.dialog = false;
+      }, 1000);
       console.log(data);
     }
   },
