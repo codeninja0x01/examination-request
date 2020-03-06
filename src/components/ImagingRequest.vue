@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <v-row justify="center">
-      <v-dialog v-model="dialog" persistent max-width="1500px">
+      <v-dialog v-model="dialog" persistent max-width="1500px" :no-enforce-focus="true">
         <template v-slot:activator="{ on }">
           <v-btn color="primary" dark v-on="on">Imaging Request</v-btn>
         </template>
@@ -20,9 +20,6 @@
             <v-subheader>Imaging Dignosis</v-subheader>
           </v-card-title>
           <v-card-text>
-            <v-overlay :value="overlay">
-              <v-progress-circular indeterminate size="64"></v-progress-circular>
-            </v-overlay>
             <v-form>
               <v-container>
                 <v-row>
@@ -45,7 +42,7 @@
                         <v-switch
                           v-for="test in tests"
                           :key="test.id"
-                          v-model="patienttestTests"
+                          v-model="patientTests"
                           inset
                           :label="test.title"
                           :value="test.id"
@@ -80,46 +77,27 @@ export default {
   data: () => ({
     patientImagingTests: [],
     patientConditions: [],
+    patientTests: [],
     clinicalInfo: "",
     provisionalDiagnosis: "",
-    dialog: "",
-    overlay: true,
+    dialog: ""
   }),
   methods: {
     remove(item) {
       const index = this.patient_tests.indexOf(item.value);
       if (index >= 0) this.patiimagingTestsent_tests.splice(index, 1);
     },
-    submit() {
-      let data = {
-        patientImagingTests: this.patientImagingTests,
-        patientConditions: this.patientConditions,
-        clinicalInfo: this.clinicalInfo,
-        provisionalDiagnosis: this.provisionalDiagnosis
-      };
-      // Implement posting to remote
-      // On Success Close modal
-      this.overlay = true;
-      setTimeout(() => {
-        this.overlay = false;
-        this.dialog = false;
-      }, 1000);
-      console.log(data);
-    }
+    submit() {}
   },
   computed: {
     ...mapState({
-      conditions: state => state.patientConditions,
-      tests: state => state.imagingTests,
+      conditions: state => state.imagingRequestModule.patientConditions,
+      tests: state => state.imagingRequestModule.imagingTests
     })
   },
   created() {
-    this.$store.dispatch("fetchImagingTest").then(() => {
-      this.overlay = false;
-    });
-    this.$store.dispatch("fetchPatientCondition").then(() => {
-      this.overlay = false;
-    });
+    this.$store.dispatch("fetchImagingTest").then(() => {});
+    this.$store.dispatch("fetchPatientCondition").then(() => {});
   }
 };
 </script>

@@ -28,7 +28,7 @@
                 <v-row>
                   <v-col cols="12" sm="6">
                     <v-autocomplete
-                      :items="specimen_types"
+                      :items="specimenTypes"
                       v-model="patientSpecimenTypes"
                       item-text="title"
                       item-value="value"
@@ -83,6 +83,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   data: () => ({
     patientTests: [],
@@ -90,35 +91,21 @@ export default {
     priority: "0",
     note: "",
     dialog: false,
-    overlay: false
+    overlay: false,
+    fullPage: false
   }),
   methods: {
     remove(item) {
       const index = this.patientTests.indexOf(item.value);
       if (index >= 0) this.patientTests.splice(index, 1);
     },
-    submit() {
-      let data = {
-        patientTests: this.patientTests,
-        patientSpecimenTypes: this.patientSpecimenTypes,
-        priority: this.priority,
-        note: this.note
-      };
-      this.overlay = true;
-      setTimeout(() => {
-        this.overlay = false;
-        this.dialog = false;
-      }, 1000);
-      console.log(data);
-    }
+    submit() {}
   },
   computed: {
-    tests() {
-      return this.$store.getters.getTests;
-    },
-    specimen_types() {
-      return this.$store.getters.getSpecimentType;
-    }
+    ...mapState({
+      tests: state => state.labRequestModule.labTests,
+      specimenTypes: state => state.labRequestModule.specimenTypes
+    })
   },
   created() {
     this.$store.dispatch("fetchTests").then(() => {
