@@ -1,9 +1,0 @@
-[
-  { "id": "1", "title": "X-Ray", "value": "x_ray" },
-  { "id": "2", "title": "Ultrasound", "value": "ultrasound" },
-  { "id": "3", "title": "Fluoroscopy", "value": "fluoroscopy" },
-  { "id": "4", "title": "Angiography", "value": "angiography" },
-  { "id": "5", "title": "Mammography", "value": "mammography" },
-  { "id": "6", "title": "MRI", "value": "mri" },
-  { "id": "7", "title": "CT Scan", "value": "ct_scan" }
-]

@@ -1,8 +1,0 @@
-[
-    { "id": "1", "title": "Any Known Allergies?", "value": "allergies" },
-    { "id": "2", "title": "Hyberthyroidism?", "value": "hyberthyroidism" },
-    { "id": "3", "title": "Intramedullary Nail?", "value": "intramedullary_nail" },
-    { "id": "4", "title": "Cardiac Pacemaker?", "value": "cardiac_pacemaker" },
-    { "id": "5", "title": "Carebral Aneurysm Clip?", "value": "carebral_aneurysm_clip" },
-    { "id": "6", "title": "Joint Replacement?", "value": "joint_replacement" }
-]
