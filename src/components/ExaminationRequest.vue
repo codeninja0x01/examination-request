@@ -29,7 +29,7 @@
                   <v-col cols="12" sm="6">
                     <v-autocomplete
                       :items="specimen_types"
-                      v-model="patient_specimen_types"
+                      v-model="patientSpecimenTypes"
                       item-text="title"
                       item-value="value"
                       label="Specimen Type"
@@ -49,7 +49,7 @@
                   <v-col cols="12" sm="6" v-for="test in tests" :key="test.id">
                     <v-autocomplete
                       :items="test.sub"
-                      v-model="patient_tests"
+                      v-model="patientTests"
                       filled
                       chips
                       item-text="title"
@@ -85,22 +85,22 @@
 <script>
 export default {
   data: () => ({
-    patient_tests: [],
-    patient_specimen_types: [],
+    patientTests: [],
+    patientSpecimenTypes: [],
     priority: "0",
     note: "",
     dialog: false,
-    overlay: true
+    overlay: false
   }),
   methods: {
     remove(item) {
-      const index = this.patient_tests.indexOf(item.value);
-      if (index >= 0) this.patient_tests.splice(index, 1);
+      const index = this.patientTests.indexOf(item.value);
+      if (index >= 0) this.patientTests.splice(index, 1);
     },
     submit() {
       let data = {
-        patient_tests: this.patient_tests,
-        patient_specimen_types: this.patient_specimen_types,
+        patientTests: this.patientTests,
+        patientSpecimenTypes: this.patientSpecimenTypes,
         priority: this.priority,
         note: this.note
       };

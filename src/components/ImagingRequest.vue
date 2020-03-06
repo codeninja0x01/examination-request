@@ -27,14 +27,14 @@
               <v-container>
                 <v-row>
                   <v-col cols="12" sm="5">
-                    <v-text-field v-model="provisional_diagnosis" label="Provisional Diagnosis"></v-text-field>
+                    <v-text-field v-model="provisionalDiagnosis" label="Provisional Diagnosis"></v-text-field>
                     <v-row>
                       <v-col cols="12" sm="6">
                         <header>Patient Condition</header>
                         <v-switch
                           v-for="condition in patientConditions"
                           :key="condition.id"
-                          v-model="patient_conditions"
+                          v-model="patientConditions"
                           inset
                           :label="condition.title"
                           :value="condition.id"
@@ -45,7 +45,7 @@
                         <v-switch
                           v-for="imaging in imagingTests"
                           :key="imaging.id"
-                          v-model="patient_imaging_tests"
+                          v-model="patientImagingTests"
                           inset
                           :label="imaging.title"
                           :value="imaging.id"
@@ -57,7 +57,7 @@
                     <v-textarea class="mx-2" label="Clinical Information" rows="1"></v-textarea>
                     <v-textarea
                       outlined
-                      v-model="clinical_info"
+                      v-model="clinicalInfo"
                       name="input-7-4"
                       rows="16"
                       label="Procedure"
@@ -77,10 +77,10 @@
 <script>
 export default {
   data: () => ({
-    patient_imaging_tests: [],
-    patient_conditions: [],
-    clinical_info: "",
-    provisional_diagnosis: "",
+    patientImagingTests: [],
+    patientConditions: [],
+    clinicalInfo: "",
+    provisionalDiagnosis: "",
     dialog: "",
     overlay: true
   }),
@@ -91,10 +91,10 @@ export default {
     },
     submit() {
       let data = {
-        patient_imaging_tests: this.patient_imaging_tests,
-        patient_conditions: this.patient_conditions,
-        clinical_info: this.clinical_info,
-        provisional_diagnosis: this.provisional_diagnosis
+        patientImagingTests: this.patientImagingTests,
+        patientConditions: this.patientConditions,
+        clinicalInfo: this.clinicalInfo,
+        provisionalDiagnosis: this.provisionalDiagnosis
       };
       // Implement posting to remote
       // On Success Close modal
