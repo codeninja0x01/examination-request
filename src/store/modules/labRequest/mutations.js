@@ -1,9 +1,9 @@
 const mutations = {
-  setTests(state, tests) {
-    state.tests = tests;
+  setLabTests(state, labTests) {
+    state.labTests = labTests;
   },
-  setSpecimentType(state, specimen_types) {
-    state.specimen_types = specimen_types;
+  setSpecimentType(state, specimenTypes) {
+    state.specimenTypes = specimenTypes;
   }
 };
 

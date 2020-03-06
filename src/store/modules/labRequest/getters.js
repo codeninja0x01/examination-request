@@ -1,9 +1,9 @@
 const getters = {
-  getTests(state) {
-    return state.tests;
+  getLabTests(state) {
+    return state.labTests;
   },
   getSpecimentType(state) {
-    return state.specimen_types;
+    return state.specimenTypes;
   }
 };
 

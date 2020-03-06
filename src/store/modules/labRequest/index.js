@@ -4,8 +4,8 @@ import mutations from "./mutations";
 
 const labRequestModule = {
   state: {
-    specimen_types: [],
-    tests: []
+    specimenTypes: [],
+    labTests: []
   },
   mutations: mutations,
   actions: actions,

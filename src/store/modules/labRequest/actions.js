@@ -2,12 +2,12 @@ import client from "api-client";
 
 const actions = {
   fetchTests({ commit }) {
-    return client.fetchTests().then(tests => commit("setTests", tests));
+    return client.fetchTests().then(labTests => commit("setLabTests", labTests));
   },
   fetchSpecimentType({ commit }) {
     return client
       .fetchSpecimentType()
-      .then(specimen_types => commit("setSpecimentType", specimen_types));
+      .then(specimenTypes => commit("setSpecimentType", specimenTypes));
   }
 };
 
