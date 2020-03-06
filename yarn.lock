@@ -7996,6 +7996,11 @@ vue-loader@^15.8.3:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
+vue-loading-overlay@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/vue-loading-overlay/-/vue-loading-overlay-3.3.1.tgz#532ff1a0ea17a11996026cab4ee6d69f605109b4"
+  integrity sha512-3USAgoW3RmP5LZ3gqEw4DwwzE2Jv3mdImVZVwAGYGkwL49Oe2h1coF30TrptEt84zwvoiyWFN6dxYqrPjnlPCA==
+
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-4.1.2.tgz#dedf349806f25ceb4e64f3ad7c0a44fba735fcf8"

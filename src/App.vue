@@ -5,6 +5,7 @@
     </v-app-bar>
 
     <v-content>
+      <LoadingOverlay/>
       <ExaminationRequest />
       <ImagingRequest />
     </v-content>
@@ -14,13 +15,15 @@
 <script>
 import ExaminationRequest from "./components/ExaminationRequest";
 import ImagingRequest from "./components/ImagingRequest";
+import LoadingOverlay from "./components/LoadingOverlay";
 
 export default {
   name: "App",
 
   components: {
     ExaminationRequest,
-    ImagingRequest
+    ImagingRequest,
+    LoadingOverlay,
   },
 
   data: () => ({
