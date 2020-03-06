@@ -32,7 +32,7 @@
                       <v-col cols="12" sm="6">
                         <header>Patient Condition</header>
                         <v-switch
-                          v-for="condition in patientConditions"
+                          v-for="condition in conditions"
                           :key="condition.id"
                           v-model="patientConditions"
                           inset
@@ -43,12 +43,12 @@
                       <v-col cols="12" sm="6">
                         <header>Examination Requested</header>
                         <v-switch
-                          v-for="imaging in imagingTests"
-                          :key="imaging.id"
-                          v-model="patientImagingTests"
+                          v-for="test in tests"
+                          :key="test.id"
+                          v-model="patienttestTests"
                           inset
-                          :label="imaging.title"
-                          :value="imaging.id"
+                          :label="test.title"
+                          :value="test.id"
                         ></v-switch>
                       </v-col>
                     </v-row>
@@ -75,6 +75,7 @@
 </template>
 
 <script>
+import { mapState } from "vuex";
 export default {
   data: () => ({
     patientImagingTests: [],
@@ -82,7 +83,7 @@ export default {
     clinicalInfo: "",
     provisionalDiagnosis: "",
     dialog: "",
-    overlay: true
+    overlay: true,
   }),
   methods: {
     remove(item) {
@@ -107,14 +108,10 @@ export default {
     }
   },
   computed: {
-    patientConditions() {
-      console.log(this.$store.getters.getPatientConditions);
-
-      return this.$store.getters.getPatientConditions;
-    },
-    imagingTests() {
-      return this.$store.getters.getImagingTest;
-    }
+    ...mapState({
+      conditions: state => state.patientConditions,
+      tests: state => state.imagingTests,
+    })
   },
   created() {
     this.$store.dispatch("fetchImagingTest").then(() => {
