@@ -5,16 +5,23 @@ import imagingRequestModule from "./modules/imagingRequest";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+const store = new Vuex.Store({
   state: {
-    isLoading: false
+    isLoading: false,
+    notification: {
+      message: null,
+      title: null
+    }
   },
   mutations: {
-    START_LOADING: state => (state.isLoading = true),
-    FINISH_LOADING: state => (state.isLoading = false)
+    START_LOADING: state => state.isLoading++,
+    FINISH_LOADING: state => state.isLoading--,
+    SET_NOTIFICATION: (state, payload) => (state.notification = payload)
   },
   modules: {
     labRequestModule,
     imagingRequestModule
   }
 });
+
+export default store;

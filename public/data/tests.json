@@ -3,16 +3,36 @@
     "id": 21,
     "title": "Hematology",
     "sub": [
-      { "title": "CBC", "value": "cbc" },
-      { "title": "ESR", "value": "esr" },
-      { "title": "Hemoglobin", "value": "hemoglobin" },
-      { "title": "Reticulocyte", "value": "reticulocyte" },
-      { "title": "Platelet count", "value": "platelet_count" },
-      { "title": "Blood Morphology", "value": "blood_morphology" },
-      { "title": "PT with INR", "value": "pt_with_inr" },
-      { "title": "aPTT", "value": "aptt" },
-      { "title": "Fibrinogen", "value": "fibrinogen" },
-      { "title": "ABO with RH Factor", "value": "abo_with_rh_factor" }
+      { "id": 1, "title": "CBC", "value": "cbc", "parent": 21 },
+      { "id": 2, "title": "ESR", "value": "esr", "parent": 21 },
+      { "id": 3, "title": "Hemoglobin", "value": "hemoglobin", "parent": 21 },
+      {
+        "id": 4,
+        "title": "Reticulocyte",
+        "value": "reticulocyte",
+        "parent": 21
+      },
+      {
+        "id": 5,
+        "title": "Platelet count",
+        "value": "platelet_count",
+        "parent": 21
+      },
+      {
+        "id": 6,
+        "title": "Blood Morphology",
+        "value": "blood_morphology",
+        "parent": 21
+      },
+      { "id": 7, "title": "PT with INR", "value": "pt_with_inr", "parent": 21 },
+      { "id": 8, "title": "aPTT", "value": "aptt", "parent": 21 },
+      { "id": 9, "title": "Fibrinogen", "value": "fibrinogen", "parent": 21 },
+      {
+        "id": 10,
+        "title": "ABO with RH Factor",
+        "value": "abo_with_rh_factor",
+        "parent": 21
+      }
     ]
   },
   {
@@ -33,11 +53,11 @@
     "id": 23,
     "title": "Immunoassay",
     "sub": [
-        { "title": "T3", "value": "t3" },
-        { "title": "T4", "value": "t4" },
-        { "title": "TSH", "value": "tsh" },
-        { "title": "Free T3", "value": "free_t3" },
-        { "title": "Free T4", "value": "free_t4" }
+      { "title": "T3", "value": "t3" },
+      { "title": "T4", "value": "t4" },
+      { "title": "TSH", "value": "tsh" },
+      { "title": "Free T3", "value": "free_t3" },
+      { "title": "Free T4", "value": "free_t4" }
     ]
   },
   {
@@ -53,9 +73,12 @@
     "id": 25,
     "title": "Parasitology",
     "sub": [
-        { "title": "Stool Exam (Direct)", "value": "stool_exam_direct" },
-        { "title": "Stool Exam (Concentration)", "value": "stool_exam_concentration" },
-        { "title": "Malaria Test", "value": "malaria_test" }
+      { "title": "Stool Exam (Direct)", "value": "stool_exam_direct" },
+      {
+        "title": "Stool Exam (Concentration)",
+        "value": "stool_exam_concentration"
+      },
+      { "title": "Malaria Test", "value": "malaria_test" }
     ]
   },
   {
@@ -79,8 +102,6 @@
   {
     "id": 28,
     "title": "Miscellaneous",
-    "sub": [
-      { "title": "FNA", "value": "fna" }
-    ]
+    "sub": [{ "title": "FNA", "value": "fna" }]
   }
 ]

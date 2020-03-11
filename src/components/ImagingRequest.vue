@@ -19,7 +19,7 @@
           <v-card-title>
             <v-subheader>Imaging Dignosis</v-subheader>
           </v-card-title>
-          <v-card-text>
+          <v-card-text ref="formContainer">
             <v-form>
               <v-container>
                 <v-row>
@@ -72,7 +72,13 @@
 </template>
 
 <script>
+import Vue from "vue";
 import { mapState } from "vuex";
+import Loading from "vue-loading-overlay";
+// Import stylesheet
+import "vue-loading-overlay/dist/vue-loading.css";
+// Init plugin
+Vue.use(Loading);
 export default {
   data: () => ({
     patientImagingTests: [],
@@ -87,7 +93,17 @@ export default {
       const index = this.patient_tests.indexOf(item.value);
       if (index >= 0) this.patiimagingTestsent_tests.splice(index, 1);
     },
-    submit() {}
+    submit() {
+      let loader = this.$loading.show({
+        // Optional parameters
+        container: this.$refs.formContainer,
+        canCancel: false,
+      });
+      // simulate AJAX
+      setTimeout(() => {
+        loader.hide();
+      }, 5000);
+    }
   },
   computed: {
     ...mapState({

@@ -19,7 +19,7 @@
           <v-card-title>
             <v-subheader>Clinical Dignosis</v-subheader>
           </v-card-title>
-          <v-card-text>
+          <v-card-text ref="formContainer">
             <v-overlay :value="overlay">
               <v-progress-circular indeterminate size="64"></v-progress-circular>
             </v-overlay>
@@ -99,7 +99,17 @@ export default {
       const index = this.patientTests.indexOf(item.value);
       if (index >= 0) this.patientTests.splice(index, 1);
     },
-    submit() {}
+    submit() {
+      let loader = this.$loading.show({
+        // Optional parameters
+        container: this.$refs.formContainer,
+        canCancel: false
+      });
+      // simulate AJAX
+      setTimeout(() => {
+        loader.hide();
+      }, 5000);
+    }
   },
   computed: {
     ...mapState({

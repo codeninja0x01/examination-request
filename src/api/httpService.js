@@ -12,6 +12,7 @@ const getClient = (baseUrl = null) => {
   client.interceptors.request.use(
     requestConfig => {
       store.commit("START_LOADING");
+
       return requestConfig;
     },
     requestError => {
@@ -26,6 +27,11 @@ const getClient = (baseUrl = null) => {
       return new Promise(resolve =>
         setTimeout(() => {
           store.commit("FINISH_LOADING");
+          store.commit("SET_NOTIFICATION", {
+            title: "Fetched",
+            message: "Data has been fetched successfully",
+            type: "success"
+          });
           resolve(response);
         }, 5000)
       );
